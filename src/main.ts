@@ -1,5 +1,6 @@
 import "./style.css";
 import { setRenderCallback } from "./lib/store.ts";
+import { NewPaintingForm } from "./src/components/NewPaintingForm.ts";
 
 // Statiska sidor
 // måste refererera till den specifika .html filen med "?raw" för att kunna läsas in
@@ -19,6 +20,8 @@ const currentPage = (): string | HTMLElement => {
       return homeHTML;
     case "/about":
       return about();
+    case "/new":
+      return NewPaintingForm();
     default:
       return "404";
   }
